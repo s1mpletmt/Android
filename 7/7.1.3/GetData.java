@@ -1,4 +1,5 @@
 public class GetData{
+	//获取网络图片数据的方法：
 	public static byte[] getImage(String path) throws Exception{
 		URL url = new URL(path);
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();

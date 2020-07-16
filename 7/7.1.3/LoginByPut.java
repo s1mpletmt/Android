@@ -7,7 +7,7 @@ public static String LoginByPut(Context mContext, String mobile, String password
 		conn.setReadTimeout(5000);
 		conn.setConnectTimeout(5000);
 		conn.setDoOutput(true);
-		conn.setDoInput(ture);
+		conn.setDoInput(true);
 		conn.setUseCaches(false);
 		
 		String data = "mobile= " + mobile + "&password= " + password + "&from= " + from + "&devid= " + devid

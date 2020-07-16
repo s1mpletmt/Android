@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity{
 				case 0x003:
 				    hideAllWidget();
                     webView.setVisibility(View.VISIBLE);
+					webView.loadDataWithBaseURL("", detail, "text/html", "UTF-8", "");
                     Toast.makeText(MainActivity.this, "网页加载完毕", Toast.LENGTH_SHORT).show();
                     break;	
 				default:

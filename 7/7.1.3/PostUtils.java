@@ -8,13 +8,13 @@ public class PostUtils{
 			conn.setRequestMethod("POST");
 			conn.setReadTimeout(5000);
 			conn.setConnectTimeout(5000);
-			//设置运行输入，输出：
+			//设置允许输入，输出：
 			conn.setDoOutPut(true);
 			conn.setDoInput(true);
 			//Post方式不能缓存，需手动设置为false
 			conn.setUseCaches(false);
 			//我们请求的数据
-			String dara = "passwd=" + URLEncoder.encode(passwd, "UTF-8") + "&number = " + 
+			String data = "passwd=" + URLEncoder.encode(passwd, "UTF-8") + "&number = " + 
 						URLEncoder.encode(number, "UTF-8");
 			//获取输出流
 			OutputStream out = conn.getOutputStream();
@@ -22,7 +22,7 @@ public class PostUtils{
 			out.flush();
 			if(conn.getResponseCode() == 200){
 				//获取相应的输入流对象
-				InputStream is = conn.getBytesInputStream();
+				InputStream is = conn.getInputStream();
 				//创建字节输出流对象
 				ByteArrayOutputStream message = new ByteArrayOutputStream();
 				//定义读取的长度
